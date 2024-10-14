@@ -1,14 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import './CategoryMenu.css';
 
-//static categories, will be replaced by api call to fetch categories.
-const categories = ["Electronics", "Jewelery", "Men's Clothing", "Women's Clothing"];
-
-const CategoryMenu = () => {
+const CategoryMenu = ({categories}) => {
 
     return (
         <div className="category__menu">
-            {categories.map((category) => (
+            {categories && categories.map((category) => (
                 <NavLink
                     key={category}
                     to={`/category/${category}`}

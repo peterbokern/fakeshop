@@ -20,6 +20,7 @@
     font-weight: bold;
     position: relative;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-wrap: nowrap;
 }
 
 .category__menu-link:hover {
@@ -44,4 +45,11 @@
 
 .category__menu-link--active {
     color: black;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .category__menu {
+        display: none; /* Hide the category menu on smaller screens */
+    }
 }
