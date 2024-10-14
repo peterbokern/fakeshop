@@ -1,6 +1,7 @@
 .navigation {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 2rem;
     height: 6.25rem;
     position: relative;
