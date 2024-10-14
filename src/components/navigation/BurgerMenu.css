@@ -1,0 +1,62 @@
+.bm-menu-wrap {
+    left: 0; /* Align to the left of the screen */
+    top: 4.75rem; /* Position menu under header */
+}
+
+.bm-menu {
+    background: #ffffff;
+    padding: 2.5rem 1.5rem 0;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Burger menu styles */
+.navigation__burger-menu .bm-burger-button {
+    display: none; /* Hide the burger menu by default */
+    margin-left: 0;
+    padding: 0 1rem;
+}
+
+/* Burger bars styles */
+.bm-burger-bars {
+    background: black;
+    height: 0.1875rem; /* Height of each bar */
+}
+
+/* Close icon styles */
+.bm-cross {
+    background: black;
+}
+
+/* Menu item list styles */
+.bm-item-list {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    padding: 0.8rem;
+    gap: 0.625rem;
+}
+
+/* Individual menu items */
+.bm-item {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Menu item hover effect */
+.bm-item:hover {
+    color: #007bff;
+}
+
+/* Show burger button on smaller screens */
+@media (max-width: 48rem) {
+    .navigation__burger-menu .bm-burger-button {
+        display: block; /* Display the burger button */
+        position: relative;
+        width: 1.5rem;
+        height: 1.125rem;
+        margin-left: 1rem;
+    }
+}

@@ -1,0 +1,48 @@
+/* Actions container */
+.navigation__actions {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+/* Icon styles */
+.navigation__icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+}
+
+.navigation__icon-like,
+.navigation__icon-shopping-cart {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Like icon color */
+.navigation__icon-like .cls-1 {
+    fill: #6acbb8;
+}
+
+/* Cart item count badge */
+.navigation__cart-count {
+    position: absolute;
+    top: -0.8125rem;
+    right: -0.75rem;
+    background-color: red;
+    color: white;
+    width: 1.125rem;
+    height: 1.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Hover effect for like icon */
+.navigation__icon:hover .cls-1 {
+    fill: #4daaa1;
+}
