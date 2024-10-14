@@ -1,0 +1,45 @@
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 10vh;
+}
+
+/* Header container */
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Brand logo styles */
+.header__logo {
+    fill: white !important;
+    height: 50px; /* Adjusted height */
+    width: auto;
+    margin-left: 50px;
+}
+
+/* Login container styles */
+.header__login-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+/* User icon styles */
+.header__user-icon {
+    margin-right: 10px;
+}
+
+/*login button styles*/
+.header__login {
+    color: white;
+}
+
+
+
