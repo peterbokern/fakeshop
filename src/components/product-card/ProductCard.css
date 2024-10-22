@@ -1,0 +1,44 @@
+.product {
+    width: 13.125rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.product__image-container {
+    position: relative;
+    background-color: #f8f8f8;
+    border-radius: 0.625rem 0.625rem 0 0;
+    overflow: hidden;
+}
+
+.product__image {
+    height: 15rem;
+    width: 100%;
+    background-color: #f8f8f8;
+    filter: brightness(0.9) contrast(-10) sepia(0);
+    mix-blend-mode: darken;
+}
+
+.product__details p,
+.product__details h2 {
+    margin: 0.125rem 0;
+}
+
+.product__subtext {
+    font-size: 0.75rem;
+    color: #737373;
+}
+
+.product__title {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.product__price {
+    font-weight: 500;
+    padding: 0.25rem;
+}
+
