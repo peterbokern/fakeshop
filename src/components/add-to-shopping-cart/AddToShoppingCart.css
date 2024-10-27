@@ -1,0 +1,31 @@
+.add-to-cart__product-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.product-quantity-actions button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.add-to-cart__button {
+    height: 3.125rem;
+    padding: 0.9375rem 1.875rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.add-to-cart__button:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.add-to-cart__icon {
+    height: 1.5rem;
+    fill: white;
+}
+
+.add-to-cart-icon:hover {
+    height: 1.5rem;
+    fill: black;
+}
