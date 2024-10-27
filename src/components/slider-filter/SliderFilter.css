@@ -1,0 +1,78 @@
+.slider-filter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.slider-filter__label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.slider-filter__slider {
+    width: 95%;
+}
+
+/* ant slider styling */
+.ant-slider-track {
+    background-color: #1890ff;
+    height: 0.3125rem;
+}
+
+.ant-slider-handle {
+    background-color: #1890ff;
+    border-color: #1890ff;
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.3125rem; /* Center align */
+}
+
+.slider-filter__input-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    margin-top: 0.625rem; /* Space between slider and inputs */
+}
+
+.slider-filter__input {
+    width: 3.75rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+}
+
+.slider-filter__input:focus {
+    border-color: #007BFF; /* Highlight input border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.slider-filter__separator {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.slider-filter__button {
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slider-filter__button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}

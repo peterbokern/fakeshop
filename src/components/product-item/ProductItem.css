@@ -1,0 +1,114 @@
+
+.product-item {
+    display: flex;
+    flex-direction: row;
+    padding: 1.25rem;
+    gap: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.product-item:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.3125rem); /* Lift item on hover */
+}
+
+.product-item__image-container {
+    position: relative;
+    flex-basis: 18.75rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.75rem;
+    flex-shrink: 1;
+    min-width: 9.375rem;
+}
+
+.product-item__image {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+    padding: 0.625rem;
+    transition: transform 0.3s ease;
+}
+
+.product-item__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.625rem;
+    padding: 0 1.25rem;
+}
+
+.product-item__image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.product-item__like-button {
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.product-item__like-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+}
+
+.product-item__details h2 {
+    margin: 0;
+    font-size: 1.125rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.product-item__details p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.product-item__details p strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+.product-item__price {
+    font-size: 1.375rem;
+    font-weight: bold;
+    margin: 0.625rem 0;
+}
+
+.product-item__buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-left: 1px solid #ddd;
+    padding-left: 1.25rem;
+    gap: 0.625rem;
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        flex-wrap: wrap;
+    }
+
+    .product-item__description {
+        display: none;
+    }
+}

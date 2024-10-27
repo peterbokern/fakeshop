@@ -6,7 +6,7 @@ import CategoryPage from "@/pages/category-page/CategoryPage.jsx";
 import Home from "@/pages/home/Home.jsx";
 
 const App = () => {
-    console.log("hello");
+
     return (
         <>
             <Router>
