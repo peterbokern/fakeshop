@@ -2,6 +2,7 @@
 import "./ProductItem.css";
 import LikeButton from "@/components/like-button/LikeButton.jsx";
 import {useNavigate} from "react-router-dom";
+import AddToShoppingCart from "@/components/add-to-shopping-cart/AddToShoppingCart.jsx";
 
 const ProductItem = ({ product }) => {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ const ProductItem = ({ product }) => {
             <div className="product-item__buy">
                 <LikeButton className="product-item__like-button" id={product.id} />
                 <p className="product-item__price">${product.price}</p>
-                {/*<AddToShoppingCart productId={product.id} placeholder/>*/}
+                <AddToShoppingCart productId={product.id} placeholder/>
             </div>
         </article>
     );
