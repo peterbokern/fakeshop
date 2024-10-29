@@ -1,0 +1,44 @@
+
+.login-page__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.login-page__text {
+    padding: 1rem;
+    position: relative; /* Needed to position the link's underline */
+}
+
+.login-page__text-link {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+/* Move link upwards on hover */
+.login-page__text-link:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Underline effect for hover */
+.login-page__text-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.2rem;
+    background-color: #0056b3; /* Underline color */
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+/* Extend underline width on hover */
+.login-page__text-link:hover::after {
+    width: 100%;
+}
