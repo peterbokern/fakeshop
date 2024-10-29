@@ -18,28 +18,87 @@
 /* Brand logo styles */
 .header__logo {
     fill: white !important;
-    height: 50px; /* Adjusted height */
+    height: 3.125rem; /* Adjusted height */
     width: auto;
-    margin-left: 50px;
+    margin-left: 3.125rem;
 }
 
 /* Login container styles */
 .header__login-container {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
 }
 
 /* User icon styles */
 .header__user-icon {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
-/*login button styles*/
+/* Login button styles */
 .header__login {
     color: white;
 }
 
+/* User info container */
+.header__user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: white;
+    max-width: 18.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
+/* Username styles */
+.header__username {
+    flex-grow: 1;
+    color: white;
+}
 
+/* Button styles */
+.header__button {
+    background: none;
+    padding: 0.3125rem 0.625rem;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    position: relative; /* Relative position for underline effect */
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Button hover effect */
+.header__button:hover {
+    transform: translateY(-0.3125rem);
+    color: #ddd;
+}
+
+/* Underline effect */
+.header__button::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.125rem;
+    background-color: white;
+    bottom: -0.3125rem;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.header__button:hover::after {
+    width: 100%;
+}
+
+/* Modifier classes for login and logout buttons */
+.header__button--login {
+    font-weight: bold;
+}
+
+.header__button--logout {
+    font-style: italic;
+}
