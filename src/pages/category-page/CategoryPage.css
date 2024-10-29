@@ -58,4 +58,8 @@
     .category-page__filter-pane{
         display: none;
     }
+
+    .category-page__container {
+        padding-left: 0;
+    }
 }
