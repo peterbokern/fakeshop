@@ -25,7 +25,7 @@ const LikedPage = () => {
                     likedItems.map(product => (
                         <ProductItem key={product.id} product={product}/>))
                     :
-                    <p>You have 0 liked items</p>
+                    <p className="liked-products__empty">You have 0 liked items</p>
                 }
             </div>
         </div>
