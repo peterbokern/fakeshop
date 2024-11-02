@@ -23,11 +23,6 @@
     text-wrap: nowrap;
 }
 
-.category__menu-link:hover {
-    transform: translateY(-0.3125rem);
-    color: black;
-}
-
 .category__menu-link::after {
     content: "";
     position: absolute;
@@ -41,6 +36,7 @@
 
 .category__menu-link:hover::after {
     width: 100%;
+    cursor: none;
 }
 
 .category__menu-link--active {
