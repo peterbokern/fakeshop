@@ -4,11 +4,13 @@ import BurgerMenu from "@/components/navigation/BurgerMenu.jsx";
 import NavigationActions from "@/components/navigation/NavigationActions.jsx";
 import useProductCategories from "@/hooks/useProductCategories.js";
 import {useLocation} from "react-router-dom";
+import useTotalProductCount from "@/hooks/useTotalProductCount.js";
 
 const Navigation = () => {
     const {categories} = useProductCategories()
     const location = useLocation();
     const hide = location.pathname === '/login' || location.pathname === '/create-account';
+    const totalProductCount = useTotalProductCount();
 
     if (hide) return null
 
@@ -16,7 +18,7 @@ const Navigation = () => {
         <div className="navigation">
                 <BurgerMenu categories={categories} />
                 <CategoryMenu categories={categories} />
-                <NavigationActions/>
+                <NavigationActions totalProductCount={totalProductCount} />
         </div>
     );
 };

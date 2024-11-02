@@ -8,6 +8,8 @@ import ProductPage from "@/pages/product-page/ProductPage.jsx";
 import LikedPage from "@/pages/liked-page/LikedPage.jsx";
 import LoginPage from "@/pages/login-page/LoginPage.jsx";
 import CreateAccount from "@/pages/create-account/CreateAccount.jsx";
+import ShoppingCart from "@/pages/shopping-cart/ShoppingCart.jsx";
+
 
 const App = () => {
 
@@ -21,6 +23,7 @@ const App = () => {
                     <Route path="/product/:id" element={<ProductPage/>}/>
                     <Route path="/category/:categoryName" element={<CategoryPage/>}/>
                     <Route path="/likes" element={<LikedPage/>}/>
+                    <Route path="/shopping-cart" element={<ShoppingCart/>}/>
                     <Route path="/login" element={<LoginPage/>}/>
                     <Route path="/create-account" element={<CreateAccount/>}/>
                 </Routes>
