@@ -7,7 +7,7 @@ import SearchBar from "@/components/search/SearchBar.jsx";
 import ProductItem from "@/components/product-item/ProductItem.jsx";
 import useFilteredAndSortedProducts from "@/hooks/useFilteredAndSortedProducts";
 import { useProducts } from "@/hooks/useProducts.js";
-import {toast} from "react-toastify";
+import { toast } from "react-toastify";
 
 const CategoryPage = () => {
     const { categoryName } = useParams();
@@ -64,16 +64,12 @@ const CategoryPage = () => {
                         label="Price Range"
                         rangeValues={rangePriceValues}
                         dynamicMax={maxPrice}
-                        minInput={rangePriceValues[0].toString()}
-                        maxInput={rangePriceValues[1].toString()}
                         handleRangeChange={handlePriceRangeChange}
                     />
                     <SliderFilter
                         label="Rating Range"
                         rangeValues={rangeRatingValues}
                         dynamicMax={maxRating}
-                        minInput={rangeRatingValues[0].toString()}
-                        maxInput={rangeRatingValues[1].toString()}
                         handleRangeChange={handleRatingRangeChange}
                     />
                 </aside>
