@@ -3,6 +3,7 @@ import "./ProductPage.css";
 import AddToShoppingCart from "@/components/add-to-shopping-cart/AddToShoppingCart.jsx";
 import LikeButton from "@/components/like-button/LikeButton.jsx";
 import { useProducts } from "@/hooks/useProducts.js";
+import {toast} from "react-toastify";
 
 const ProductPage = () => {
     const { id } = useParams();
@@ -19,7 +20,7 @@ const ProductPage = () => {
     }
 
     if (error) {
-        console.log(error);
+        toast.error("Products could not be loaded");
     }
 
     return (

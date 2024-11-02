@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { UserContext } from "@/context/UserContext.jsx";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-toastify";
 
 export const useApiLogin = () => {
     const { loginUser } = useContext(UserContext); // Use loginUser from context
@@ -26,19 +27,19 @@ export const useApiLogin = () => {
                 // Use loginUser to update context and localStorage
                 loginUser(data.username, response.data.jwt);
 
-                console.log(`Login successful: Welcome, ${data.username}!`);
+                toast.success(`Welcome, ${data.username}!`);
                 navigate('/');
             }
         } catch (error) {
             switch (error.response?.data) {
                 case 'Invalid username/password':
-                    console.log('Incorrect username or password.');
+                    toast.error('Incorrect username or password.');
                     break;
                 case 'User not found':
-                    console.log('User not found');
+                    toast.error('User not found');
                     break;
                 default:
-                    console.log('An error occurred, try again');
+                    toast.error('An error occurred, try again');
                     break;
             }
         }
