@@ -1,4 +1,5 @@
 import './App.css'
+import 'react-toastify/dist/ReactToastify.css';
 import Header from "./components/header/Header.jsx";
 import Navigation from './components/navigation/Navigation.jsx';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
@@ -9,7 +10,7 @@ import LikedPage from "@/pages/liked-page/LikedPage.jsx";
 import LoginPage from "@/pages/login-page/LoginPage.jsx";
 import CreateAccount from "@/pages/create-account/CreateAccount.jsx";
 import ShoppingCart from "@/pages/shopping-cart/ShoppingCart.jsx";
-
+import {ToastContainer} from 'react-toastify'
 
 const App = () => {
 
@@ -18,6 +19,11 @@ const App = () => {
             <Router>
                 <Header/>
                 <Navigation/>
+                <ToastContainer position="top-right"
+                                autoClose={3000}
+                                hideProgressBar={true}
+                                className="toast-container"
+                />
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/product/:id" element={<ProductPage/>}/>

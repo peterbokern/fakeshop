@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {toast} from "react-toastify";
 
 export const useApiCreateUser = () => {
     const key = import.meta.env.VITE_NOVI_API_KEY;
@@ -17,13 +18,13 @@ export const useApiCreateUser = () => {
                     },
                 }
             );
-            console.log('User created successfully:', response.data);
+            toast.success('User created successfully:');
 
             // Redirect to the login page after successful user creation
             navigate('/login');
             return response.data;
         } catch (error) {
-            console.error('Error creating user:', error.response?.data);
+            toast.error('Error creating user:', error.response?.data);
             throw error;
         }
     };
