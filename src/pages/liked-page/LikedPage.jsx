@@ -3,6 +3,9 @@ import {useContext, useMemo} from "react";
 import ProductItem from "@/components/product-item/ProductItem.jsx";
 import {useProducts} from "@/hooks/useProducts.js";
 import "./LikedPage.css"
+import {UserContext} from "@/context/UserContext.jsx";
+import {useNavigate} from "react-router-dom";
+import {toast} from "react-toastify";
 
 const LikedPage = () => {
 
@@ -15,7 +18,6 @@ const LikedPage = () => {
         }
         return [];
     }, [data, likes]);
-
 
     return (
         <div className="container">
