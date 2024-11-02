@@ -4,14 +4,14 @@ import Logo from "../../assets/brand-logo.svg?react";
 import {useContext} from "react";
 import {UserContext} from "@/context/UserContext.jsx";
 import {NavLink} from "react-router-dom";
+import {toast} from "react-toastify";
 
 const Header = () => {
 
     const { username, logoutUser } = useContext(UserContext);
 
-    // Custom logout handler to display goodbye toast
     const handleLogout = () => {
-        console.log(`Goodbye, ${username}!`);
+        toast.info(`Goodbye, ${username}!`);
         logoutUser();
     };
 

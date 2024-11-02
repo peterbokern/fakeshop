@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import ProductCarousel from "@/components/product-carousel/ProductCarousel.jsx";
 import {useProducts} from "@/hooks/useProducts.js";
 import "./Home.css"
+import {toast} from "react-toastify";
 
 const Home = () => {
 
@@ -15,7 +16,7 @@ const Home = () => {
     }, [data]);
 
     if (error) {
-        console.log(error);
+        toast.error("Product could not be loaded.");
     }
 
     if (!filteredProducts || loading) {

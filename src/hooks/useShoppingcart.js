@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { ShoppingContext } from '@/context/ShoppingCartContext.jsx';
 import updateUserInfo from '@/utils/updateUserInfo';
+import {toast} from "react-toastify";
 
 const useShoppingCart = (productId) => {
     const { cart, updateQuantity } = useContext(ShoppingContext);
@@ -27,7 +28,7 @@ const useShoppingCart = (productId) => {
 
         // Check if user is logged in
         if (!isUserLoggedIn) {
-            console.log('Login to use shopping cart!');
+            toast.warning('Login to use shopping cart!');
             return;
         }
 
@@ -43,10 +44,9 @@ const useShoppingCart = (productId) => {
         // Sync the updated cart items with the backend using updateUserInfo
         try {
             await updateUserInfo(updatedCartItems); // Call updateUserInfo to sync with the backend
-            console.log(`Product added to shopping cart.`);
+            toast.success(`Product added to shopping cart.`);
         } catch (error) {
-            console.error('Failed to update user info on server:', error);
-            console.log('An error occurred:', error);
+            toast.error('Failed to add product to shopping cart:', error);
         }
 
         // Reset quantity back to 1 after adding to cart

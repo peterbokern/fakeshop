@@ -7,6 +7,7 @@ import SearchBar from "@/components/search/SearchBar.jsx";
 import ProductItem from "@/components/product-item/ProductItem.jsx";
 import useFilteredAndSortedProducts from "@/hooks/useFilteredAndSortedProducts";
 import { useProducts } from "@/hooks/useProducts.js";
+import {toast} from "react-toastify";
 
 const CategoryPage = () => {
     const { categoryName } = useParams();
@@ -51,7 +52,7 @@ const CategoryPage = () => {
     }
 
     if (error) {
-        console.log(error);
+        toast.error("Products could not be loaded.");
     }
 
     return (
