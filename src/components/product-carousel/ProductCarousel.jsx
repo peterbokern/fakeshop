@@ -1,6 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ProductCard from '../../components/product-card/ProductCard.jsx';
+import "./ProductCarousel.css"
 
 const ProductCarousel = ({ products }) => {
     // Carousel responsiveness settings
@@ -28,7 +29,7 @@ const ProductCarousel = ({ products }) => {
     }
 
     return (
-        <div>
+        <div className="carousel">
             <Carousel
                 swipeable={true}
                 draggable={true}

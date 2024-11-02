@@ -12,6 +12,7 @@
     background-color: #f8f8f8;
     border-radius: 0.625rem 0.625rem 0 0;
     overflow: hidden;
+    padding: 1rem 0;
 }
 
 .product__image {
