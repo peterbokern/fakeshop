@@ -72,11 +72,6 @@
     transition: transform 0.3s, color 0.3s;
 }
 
-/* Button hover effect */
-.header__button:hover {
-    transform: translateY(-0.3125rem);
-    color: #ddd;
-}
 
 /* Underline effect */
 .header__button::after {
@@ -85,7 +80,7 @@
     width: 0;
     height: 0.125rem;
     background-color: white;
-    bottom: -0.3125rem;
+    bottom: -0.125rem;
     left: 0;
     transition: width 0.3s ease;
 }
