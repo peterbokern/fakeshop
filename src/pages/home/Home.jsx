@@ -26,7 +26,7 @@ const Home = () => {
     return (
         <div className="home-container">
             <div className="container">
-                <h1>Onze Producten</h1>
+                <h1>Our products</h1>
                 <ProductCarousel products={filteredProducts}/>
             </div>
         </div>
