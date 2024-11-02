@@ -6,13 +6,16 @@ import '@/styles/global.css'
 import '@/styles/typography.css'
 import LikeContextProvider from "@/context/LikedContext.jsx";
 import {UserProvider} from "@/context/UserContext.jsx";
+import ShoppingProvider from "@/context/ShoppingCartContext.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
         <UserProvider>
-            <LikeContextProvider>
-                <App/>
-            </LikeContextProvider>
+            <ShoppingProvider>
+                <LikeContextProvider>
+                    <App/>
+                </LikeContextProvider>
+            </ShoppingProvider>
         </UserProvider>
     </StrictMode>,
 )
