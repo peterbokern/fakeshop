@@ -1,6 +1,6 @@
 import { Slider } from "antd";
 import "./SliderFilter.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "@/components/button/Button.jsx";
 
 const SliderFilter = ({
@@ -11,6 +11,12 @@ const SliderFilter = ({
                       }) => {
     const [minInput, setMinInput] = useState(rangeValues[0].toString());
     const [maxInput, setMaxInput] = useState(rangeValues[1].toString());
+
+    // Update input values when rangeValues change
+    useEffect(() => {
+        setMinInput(rangeValues[0].toString());
+        setMaxInput(rangeValues[1].toString());
+    }, [rangeValues]);
 
     // Determine maximum value based on label
     const maxLimit = label === "Rating Range" ? 5 : dynamicMax;
@@ -25,6 +31,13 @@ const SliderFilter = ({
     const handleMaxChange = (e) => {
         const value = e.target.value;
         setMaxInput(value === "" ? "" : Math.min(maxLimit, value));
+    };
+
+    // Function to handle update on Enter key press
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            handleUpdateClick();
+        }
     };
 
     const handleUpdateClick = () => {
@@ -58,6 +71,7 @@ const SliderFilter = ({
                     value={minInput}
                     min={0}
                     onChange={handleMinChange}
+                    onKeyDown={handleKeyDown} // Trigger update on Enter
                 />
                 <span className="slider-filter__separator">-</span>
                 <input
@@ -68,6 +82,7 @@ const SliderFilter = ({
                     min={0}
                     max={maxLimit}
                     onChange={handleMaxChange}
+                    onKeyDown={handleKeyDown} // Trigger update on Enter
                 />
 
                 <Button
