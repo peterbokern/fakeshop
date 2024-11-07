@@ -1,6 +1,11 @@
 # FakeShop
 
-FakeShop is een eenvoudige en moderne webshop-applicatie waarmee gebruikers producten kunnen bekijken, sorteren, filteren, en toevoegen aan hun winkelmandje. De applicatie biedt daarnaast de mogelijkheid om in te loggen en producten als favoriet op te slaan. De webapplicatie is volledig responsive en biedt een gebruiksvriendelijke interface.
+# FakeShop
+
+FakeShop is een eenvoudige en moderne webshop-applicatie ontwikkeld als eindopdracht voor de Front-end module van de NOV Hogeschool Full Stack Bootcamp opleiding. De applicatie biedt gebruikers de mogelijkheid om producten te bekijken, sorteren, filteren en toe te voegen aan hun winkelmandje.
+
+FakeShop maakt gebruik van de [FakeStore API](https://fakestoreapi.com/) om realistische productgegevens te tonen, zoals titels, prijzen, beschrijvingen en afbeeldingen. Voor het inloggen en registreren van gebruikers maakt de applicatie gebruik van de NOVI backend API op [https://novi.datavortex.nl/](https://novi.datavortex.nl/). 
+
 
 ## Inhoud
 
@@ -19,28 +24,31 @@ FakeShop biedt de volgende functionaliteiten:
 - Inloggen en registreren van gebruikers.
 - Markeren van producten als favoriet (like-functie).
 
-Hier is een screenshot van de belangrijkste pagina van de applicatie:
+Screenshot van de categoriepagina:
 
-*(Voeg hier een screenshot toe van de belangrijkste pagina, bijvoorbeeld de productpagina of homepagina)*
+![img.png](img.png)
 
 ## Benodigdheden
 
 Om deze applicatie lokaal te draaien, heb je de volgende benodigdheden:
 
 - Node.js (versie 14 of hoger aanbevolen)
-- Voor fakestore API is geen sleutel nodig. De API sleutel voor de NOVI backend staat in de .env map en word automatisch geladen door de applicatie. 
 - Een moderne browser zoals Chrome, Firefox, of Safari
-
-> **Let op**: Maak zelf een API-sleutel aan als dat nodig is. Vraag niet de nakijkende docent om een API-sleutel.
-
+- Voor fakestore API is geen sleutel nodig. De API sleutel voor de NOVI backend staat in de .env map en wordt automatisch geladen door de applicatie. De API key is
+   ```bash
+   fakeshop:r8pZ9APhXWBAasuefTgU
+  
 ## Installatie
 
 Volg de onderstaande stappen om FakeShop lokaal te installeren en te draaien:
 
-1. **Kloon de repository:**
+1. **Clone de repository:**
    ```bash
-   git clone <repository_url>
-   
+   git clone git@github.com:peterbokern/fakeshop.git
+    ````
+    Link naar github repository: <https://github.com/peterbokern/fakeshop>
+
+
 2. **Navieer naar de project folder**
    ```bash
    cd fakeshop
@@ -50,8 +58,29 @@ Volg de onderstaande stappen om FakeShop lokaal te installeren en te draaien:
    npm install
    
 4. **Voeg de API sleutel toe aan .env**
-5. ````bash
+    ````bash
    VITE_NOVI_API_KEY="fakeshop:r8pZ9APhXWBAasuefTgU"
 
 ## Inloggegevens
+
+Je kunt inloggen met de volgende inloggegevens.
+
+| Gebruikersnaam | Wachtwoord      |
+|----------------|-----------------|
+| testuser       | TestUser!1      |
+
+> **Opmerking:** Je kunt ook  zelf een account aanmaken.
+
+## Beschikbare npm-commando's
+
+In dit project zijn de volgende npm-commando's beschikbaar:
+
+- **`npm run dev`**: Hiermee kun je de applicatie in de development modus starten. Open [http://localhost:5173](http://localhost:5173) om de applicatie in je browser te bekijken.
+
+- **`npm run build`**: Bouwt de applicatie voor productie naar de `build` map. Deze build is geoptimaliseerd voor betere prestaties.
+
+
+> **Let op:** Vite gebruikt standaard poort 5173 voor de development server. Als deze poort al bezet is door een andere applicatie, kiest Vite automatisch een andere poort, zoals 5174. Controleer daarom altijd de terminal na het uitvoeren van `npm run dev` om de juiste URL te zien.
+
+
 
