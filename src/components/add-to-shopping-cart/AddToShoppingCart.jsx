@@ -1,6 +1,6 @@
 
 import QuantitySelector from '@/components/quantitiy-selector/QuantitySelector.jsx';
-import ShoppingCart from '../../../../../REACT/fakeshop/src/assets/shopping-cart.svg?react';
+import ShoppingCart from '@/assets/shopping-cart.svg?react';
 import Button from '@/components/button/Button.jsx';
 import './AddToShoppingCart.css';
 import useShoppingCart from "@/hooks/useShoppingcart.js";
