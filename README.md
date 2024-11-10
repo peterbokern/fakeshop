@@ -1,7 +1,5 @@
 # FakeShop
 
-# FakeShop
-
 FakeShop is een eenvoudige en moderne webshop-applicatie ontwikkeld als eindopdracht voor de Front-end module van de NOV Hogeschool Full Stack Bootcamp opleiding. De applicatie biedt gebruikers de mogelijkheid om producten te bekijken, sorteren, filteren en toe te voegen aan hun winkelmandje.
 
 FakeShop maakt gebruik van de [FakeStore API](https://fakestoreapi.com/) om realistische productgegevens te tonen, zoals titels, prijzen, beschrijvingen en afbeeldingen. Voor het inloggen en registreren van gebruikers maakt de applicatie gebruik van de NOVI backend API op [https://novi.datavortex.nl/](https://novi.datavortex.nl/). 
@@ -12,6 +10,7 @@ FakeShop maakt gebruik van de [FakeStore API](https://fakestoreapi.com/) om real
 - [Functionaliteit](#functionaliteit)
 - [Benodigdheden](#benodigdheden)
 - [Installatie](#installatie)
+- [API-sleutel configuratie](#api-sleutel-configuratie)
 - [Inloggegevens](#inloggegevens)
 - [Beschikbare npm-commando's](#beschikbare-npm-commando's)
 
@@ -34,9 +33,7 @@ Om deze applicatie lokaal te draaien, heb je de volgende benodigdheden:
 
 - Node.js (versie 14 of hoger aanbevolen)
 - Een moderne browser zoals Chrome, Firefox, of Safari
-- Voor fakestore API is geen sleutel nodig. De API sleutel voor de NOVI backend staat in de .env map en wordt automatisch geladen door de applicatie. De API key is
-   ```bash
-   fakeshop:r8pZ9APhXWBAasuefTgU
+- De NOVI backend API-sleutel is toegevoegd aan de `.env`-map voor beoordelingsdoeleinden en wordt automatisch geladen door de applicatie.
   
 ## Installatie
 
@@ -56,10 +53,17 @@ Volg de onderstaande stappen om FakeShop lokaal te installeren en te draaien:
 3. **Installeer dependencies**
    ```bash
    npm install
-   
-4. **Voeg de API sleutel toe aan .env**
-    ````bash
-   VITE_NOVI_API_KEY="fakeshop:r8pZ9APhXWBAasuefTgU"
+
+## API-sleutel configuratie
+
+
+**API-sleutel configuratie:**
+   Voeg een `.env`-bestand toe in de root van het project en voeg de API-sleutel toe als volgt:
+
+   VITE_NOVI_API_KEY=your_api_key_here
+
+> **Opmerking voor ontwikkelaars:** Indien je verder wilt werken met dit project, dien je zelf een API-sleutel aan te maken voor de NOVI backend via [https://novi.datavortex.nl/](https://novi.datavortex.nl/), of zelf te zorgen voor inlogfunctionaliteit.
+
 
 ## Inloggegevens
 
